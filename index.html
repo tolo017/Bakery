@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights Bakery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Sweet Delights</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Freshly Baked <span class="highlight">Happiness</span></h1>
+            <p>Made with love, one bite at a time.</p>
+            <button class="cta-button pulse" id="explore-btn">Explore Menu</button>
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <h2>Our <span class="highlight">Delicious</span> Creations</h2>
+        <div class="menu-items">
+            <div class="item" data-id="1">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Chocolate Cake">
+                <h3>Chocolate Cake</h3>
+                <p>$25</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="item" data-id="2">
+                <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Croissants">
+                <h3>Buttery Croissants</h3>
+                <p>$3</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="item" data-id="3">
+                <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Cookies">
+                <h3>Gourmet Cookies</h3>
+                <p>$2</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Bakery <span class="highlight">Gallery</span></h2>
+        <div class="slider">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Bakery Interior">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1562440499-64c9a111f713?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Cupcakes">
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-1.2.1&auto=format&fit=crop&w=1080&q=80" alt="Bread">
+            </div>
+            <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Order <span class="highlight">Now</span></h2>
+        <div class="contact-box">
+            <p><i class="fas fa-phone"></i> <a href="tel:+254715460269">+254 715 460 269</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:otibomb98@gmail.com">otibomb98@gmail.com</a></p>
+            <button class="cta-button hire-me pulse">Hire Me for a Website!</button>
+        </div>
+    </section>
+
+    <div class="cart-modal">
+        <div class="cart-content">
+            <h3>Your Cart <i class="fas fa-times close-cart"></i></h3>
+            <div class="cart-items"></div>
+            <p class="cart-total">Total: $0</p>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <div class="hire-modal">
+        <div class="hire-content">
+            <h3>Let's Build Your Website!</h3>
+            <p>Contact me today:</p>
+            <p><i class="fas fa-phone"></i> +254 715 460 269</p>
+            <p><i class="fas fa-envelope"></i> otibomb98@gmail.com</p>
+            <button class="close-hire">Got It!</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 Sweet Delights Bakery. Built by <a href="mailto:otibomb98@gmail.com">Otieno</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

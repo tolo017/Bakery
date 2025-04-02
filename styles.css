@@ -1,0 +1,506 @@
+/* Modern Bakery Styles */
+:root {
+    --primary: #ff9a8b;
+    --secondary: #ff6b6b;
+    --dark: #333;
+    --light: #fff9f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+.highlight {
+    color: var(--secondary);
+}
+
+/* Header */
+header {
+    background: var(--primary);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+nav a:hover {
+    color: var(--secondary);
+}
+
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: var(--secondary);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Menu Section */
+.menu {
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.menu h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.item:hover img {
+    transform: scale(1.05);
+}
+
+.item h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+.item p {
+    color: var(--secondary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.add-to-cart {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    margin: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-to-cart:hover {
+    background: var(--secondary);
+}
+
+/* Gallery Slider */
+.gallery {
+    padding: 4rem 5%;
+    text-align: center;
+    background: #f8e8e8;
+}
+
+.gallery h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.slider {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    color: var(--dark);
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.slider-btn:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.prev {
+    left: 2rem;
+}
+
+.next {
+    right: 2rem;
+}
+
+/* Contact Section */
+.contact {
+    padding: 6rem 5%;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.contact-box {
+    background: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-box p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.contact-box a {
+    color: var(--secondary);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
+}
+
+.contact-box i {
+    margin-right: 0.5rem;
+    color: var(--primary);
+}
+
+.hire-me {
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--dark);
+    color: white;
+}
+
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Cart Modal */
+.cart-modal {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 350px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    z-index: 1000;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+.cart-modal.active {
+    right: 0;
+}
+
+.cart-content h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+}
+
+.close-cart {
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.3s;
+}
+
+.close-cart:hover {
+    color: var(--secondary);
+}
+
+.cart-items {
+    margin-bottom: 2rem;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-item-info {
+    flex: 1;
+    margin-left: 1rem;
+}
+
+.cart-item-info h4 {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+}
+
+.cart-item-info p {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.remove-item {
+    color: #ff4757;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.cart-total {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.checkout-btn:hover {
+    background: var(--secondary);
+}
+
+/* Hire Modal */
+.hire-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    z-index: 1001;
+}
+
+.hire-modal.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.hire-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.hire-content h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.hire-content p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+}
+
+.hire-content i {
+    color: var(--primary);
+    margin-right: 0.5rem;
+}
+
+.close-hire {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.close-hire:hover {
+    background: var(--secondary);
+}
+
+/* Animations */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .menu-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .slider {
+        height: 300px;
+    }
+}
